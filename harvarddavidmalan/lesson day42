@@ -1,0 +1,31 @@
+# Checking if a value exists in the list
+num = 7
+if num in lista4:
+    print(f'Found the number {num}')
+else:
+    print(f'{num} not found')
+
+# Sorting a list
+lista1.sort()
+print(lista1)
+
+# Counting occurrences of a value in a list
+print(lista1.count(1))
+print(lista2.count('j'))
+
+# Adding elements to a list
+# To add elements to a list, we use the append() function
+# append() only adds ONE element at a time
+print(lista1)
+lista1.append(42)
+print(lista1)
+
+# Checking if a list exists inside another list
+if [8, 3, 1] in lista1:
+    print('Found the list')
+else:
+    print('List not found')
+
+# extend() adds each element of another list as a new element
+lista1.extend([123, 44, 67])
+print(lista1)

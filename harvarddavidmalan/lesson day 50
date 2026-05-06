@@ -1,0 +1,64 @@
+"""
+Dictionaries in Python
+
+Dictionaries are collections of key/value pairs.
+In other languages, they are often called maps.
+
+- Keys and values are separated by a colon (:)
+- Keys must be unique
+- Keys and values can be of any data type
+"""
+
+# Basic dictionary
+countries = {
+    'br': 'Brazil',
+    'usa': 'United States',
+    'py': 'Paraguay'
+}
+
+print('br' in countries)   # True
+print('ru' in countries)   # False
+
+# Checking values (not keys)
+print('United States' in countries.values())
+
+# ----------------------------------
+# Tuples as dictionary keys
+# ----------------------------------
+# Tuples are immutable, so they are safe to use as keys
+
+locations = {
+    (35.6895, 139.6917): 'Office in Tokyo',
+    (40.7128, -74.0060): 'Office in New York'
+}
+
+print(locations)
+print(type(locations))
+
+# ----------------------------------
+# Adding and updating dictionary data
+# ----------------------------------
+revenue = {
+    'jan': 300,
+    'feb': 400,
+    'mar': 500
+}
+
+print(revenue)
+
+# Adding new data
+revenue['apr'] = 700
+print(revenue)
+
+# Updating using update()
+revenue.update({'may': 1000})
+print(revenue)
+
+# Updating existing values
+revenue['may'] = 550
+print(revenue)
+
+revenue.update({'may': 800})
+print(revenue)
+
+# Dictionaries do not allow duplicated keys

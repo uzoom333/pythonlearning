@@ -1,0 +1,73 @@
+"""
+--------------------------------
+TUPLES
+--------------------------------
+Tuples are IMMUTABLE, meaning their values cannot be changed.
+Any modification creates a new tuple.
+"""
+
+"""
+Example 1 – Creating tuples
+Tuples are usually represented with parentheses (), but what really
+defines a tuple is the comma.
+"""
+
+tuple1 = (1, 2, 3, 4)
+print(tuple1)
+print(type(tuple1))
+
+tuple2 = 1, 2, 3, 4
+print(tuple2)
+print(type(tuple2))
+# Both are tuples, created in different ways
+
+
+"""
+Important detail:
+A tuple with only ONE element must contain a comma.
+"""
+
+tuple3 = (1)
+print(tuple3)
+print(type(tuple3))  # This is NOT a tuple
+
+tuple4 = (1,)
+print(tuple4)
+print(type(tuple4))  # This IS a tuple
+
+
+"""
+Example 2 – Creating tuples using range
+"""
+
+numbers_tuple = tuple(range(11))
+print(numbers_tuple)
+print(type(numbers_tuple))
+
+
+"""
+Example 3 – Tuple unpacking
+"""
+
+data = ('receba', 'jorge')
+school, course = data
+
+print(school)
+print(course)
+
+
+"""
+Tuples are immutable:
+There are no methods to add or remove elements.
+"""
+
+
+"""
+Working with numeric tuples
+"""
+
+values = (1, 2, 3, 4, 5)
+print(sum(values))
+print(max(values))
+print(min(values))
+print(len(values))

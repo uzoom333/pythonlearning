@@ -1,0 +1,113 @@
+"""
+Lists work like arrays/vectors, but with important differences.
+
+C / Java:
+- Arrays are fixed.
+- Example: an int array with size 5 will always store integers
+  and will have at most 5 values.
+
+Python:
+- Dynamic: no fixed size; elements can be added as long as there is memory.
+- No fixed data type: lists can store different data types.
+
+Python lists are represented by square brackets: []
+"""
+
+print(type([]))
+
+# Creating lists
+lista1 = [1, 99, 23, 44, 57]
+lista2 = ['g', 'j', 'h', 'r', 'j']
+lista3 = []
+lista4 = list(range(11))
+lista5 = list('Renato')
+
+# Checking if a value exists in a list
+num = 7
+if num in lista4:
+    print(f'Found the number {num}')
+else:
+    print(f'{num} not found')
+
+# Sorting a list
+lista1.sort()
+print(lista1)
+
+# Counting occurrences
+print(lista1.count(1))
+print(lista2.count('j'))
+
+# Adding elements
+# append() adds ONE element at a time
+print(lista1)
+lista1.append(42)
+print(lista1)
+
+# Checking if a list exists inside another list
+if [8, 3, 1] in lista1:
+    print('Found the list')
+else:
+    print('List not found')
+
+# extend() adds each element of another list
+lista1.extend([123, 44, 67])
+print(lista1)
+
+# Inserting an element at a specific index
+lista1.insert(2, 'New Value')
+print(lista1)
+
+# Joining two lists
+lista6 = lista1 + lista2
+print(lista6)
+# Same effect as extend()
+
+# Reversing lists
+lista1.reverse()
+lista2.reverse()
+# You can also use slicing: lista1[::-1]
+print(lista1)
+print(lista2)
+
+# Copying a list
+lista6 = lista2.copy()
+print(lista6)
+
+# List size
+print(len(lista1))
+
+# Removing elements
+print(lista5)
+lista5.pop()  # removes and returns the last element
+print(lista5)
+
+lista5.pop(2)  # removes by index
+print(lista5)
+
+# Clearing the list
+lista5.clear()
+print(lista5)
+
+# Repeating list elements
+nova = [1, 2, 3]
+print(nova)
+nova = nova * 3
+print(nova)
+
+# Converting string to list
+curso = 'receba do mano'
+print(curso)
+curso = curso.split()
+print(curso)
+
+curso = 'receba,do,mano'
+print(curso)
+curso = curso.split(',')
+print(curso)
+
+# Converting list back to string
+lista6 = ['receba', 'do', 'mano']
+print(lista6)
+
+curso = ' '.join(lista6)
+print(curso)

@@ -1,0 +1,98 @@
+"""
+Removing data from dictionaries
+"""
+
+# ----------------------------------
+# Removing items from a dictionary
+# ----------------------------------
+revenue = {'jan': 100, 'feb': 200}
+print(revenue)
+
+# Method 1: pop()
+removed_value = revenue.pop('feb')
+print(removed_value)
+print(revenue)
+
+# pop() requires the key
+# If the key does not exist, a KeyError will be raised
+# pop() always returns the removed value
+
+# Method 2: del
+del revenue['jan']
+print(revenue)
+
+# del does not return the removed value
+# If the key does not exist, a KeyError will be raised
+
+# ----------------------------------
+# Shopping cart example
+# ----------------------------------
+
+# Using lists
+cart = []
+
+product1 = ['PlayStation 5', 1, 2300.00]
+product2 = ['EA FC 26', 1, 300.00]
+
+cart.append(product1)
+cart.append(product2)
+
+print(cart)
+
+# Using tuples (immutable)
+product1 = ('PlayStation 5', 1, 2300.00)
+product2 = ('EA FC 26', 1, 300.00)
+
+cart = (product1, product2)
+print(cart)
+
+# Using dictionaries (more complete and readable)
+cart = []
+
+product1 = {'name': 'PlayStation 5', 'quantity': 1, 'price': 2300.00}
+product2 = {'name': 'EA FC 26', 'quantity': 1, 'price': 300.00}
+
+cart.append(product1)
+cart.append(product2)
+
+print(cart)
+
+# ----------------------------------
+# Dictionary methods
+# ----------------------------------
+data = dict(a=1, b=2, c=3)
+print(data)
+print(type(data))
+
+# Clear dictionary
+data.clear()
+print(data)
+
+# Copying dictionaries
+# Method 1: copy() → deep copy
+new_data = data.copy()
+new_data['d'] = 4
+
+print(data)
+print(new_data)
+
+# Method 2: assignment → shallow copy
+data = {'a': 1, 'b': 2}
+new_data = data
+new_data['c'] = 3
+
+print(data)
+print(new_data)
+
+# ----------------------------------
+# Using fromkeys()
+# ----------------------------------
+example = {}.fromkeys('a', 'b')
+print(example)
+
+user = {}.fromkeys(['name', 'username', 'email'], 'unknown')
+print(user)
+
+# fromkeys() receives:
+# - an iterable (keys)
+# - a single value assigned to all keys
