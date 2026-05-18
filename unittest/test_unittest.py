@@ -31,8 +31,11 @@ def square():
         print("0 squared is not 0")        
 
 """
+<<<<<<< HEAD
 import pytest
 
+=======
+>>>>>>> 1ee2e7b22df86f48061aec139bada4f63b31e898
 from unittest import square
 
 def main():
@@ -49,6 +52,11 @@ def test_negative():
 def test_zero():    
     assert square(0) == 0
 
+<<<<<<< HEAD
 def test_str():
     with pytest.raises(TypeError):
         square("cat")
+=======
+if __name__ == "__main__":
+    main()
+>>>>>>> 1ee2e7b22df86f48061aec139bada4f63b31e898

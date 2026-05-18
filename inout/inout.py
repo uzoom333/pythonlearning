@@ -27,13 +27,18 @@ with open("names.txt", "a") as file:
 for line in lines:
     print("hello", line)    
 
+<<<<<<< HEAD
 
+=======
+"""
+>>>>>>> 1ee2e7b22df86f48061aec139bada4f63b31e898
 #with method print that 
 name = input("What's your name? ")
 with open("names.txt", "a") as file:
     lines = file.readlines()
 
 for line in lines:
+<<<<<<< HEAD
     print("hello", line)  #use print("hello", line.rstrip())   
 """
 names = []
@@ -43,3 +48,6 @@ with open("namex.txt", "a") as file:
 
 for name in sorted(names):
     print(f"hello, {name}")
+=======
+    print("hello", line)     
+>>>>>>> 1ee2e7b22df86f48061aec139bada4f63b31e898
