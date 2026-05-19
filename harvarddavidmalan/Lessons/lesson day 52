@@ -1,0 +1,54 @@
+"""
+Maps (Dictionaries)
+Dictionaries are represented using curly braces {}
+"""
+
+revenue = {'jan': 100, 'feb': 200, 'mar': 400}
+
+# ----------------------------------
+# Iterating over dictionaries
+# ----------------------------------
+
+# Iterating over keys (default behavior)
+for key in revenue:
+    print(key)
+
+# Accessing values using keys
+for key in revenue:
+    print(revenue[key])
+
+# Formatting output
+for key in revenue:
+    print(f'{key} revenue is $ {revenue[key]}')
+
+# ----------------------------------
+# Accessing keys
+# ----------------------------------
+print(revenue)
+print(revenue.keys())
+
+for key in revenue.keys():
+    print(revenue[key])
+
+# ----------------------------------
+# Accessing values
+# ----------------------------------
+print(revenue.values())
+
+for value in revenue.values():
+    print(value)
+
+# ----------------------------------
+# Dictionary unpacking with items()
+# ----------------------------------
+for key, value in revenue.items():
+    print(f'key={key} and value={value}')
+
+# ----------------------------------
+# Built-in functions
+# (only work with numeric values)
+# ----------------------------------
+print(sum(revenue.values()))
+print(max(revenue.values()))
+print(min(revenue.values()))
+print(len(revenue))

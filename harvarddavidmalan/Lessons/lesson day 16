@@ -1,0 +1,29 @@
+'''
+Loop while
+
+General form:
+while boolean_expression:
+    // loop execution
+
+*The while block will be repeated as long as the boolean expression is true.
+Boolean expressions = any expression that results in true or false.
+
+Example:
+
+num = 5
+num < 5
+
+*In a while loop, it becomes important to take care of the stopping criterion (num = num + 1),
+otherwise it becomes an infinite loop. So always remember the stopping criterion,
+unless an infinite loop is needed (there are some cases like certain games capturing screen updates,
+keyboard commands, etc...).
+'''
+num = 1
+while num < 10:
+    print(num)
+    num = num + 1
+
+answer = ''
+while answer != 'yes':
+    answer = input('Did you receive it? ')
+

@@ -1,0 +1,20 @@
+'''
+Exiting loops with "break"
+* Works the same way in C and Java.
+* We use "break" to leave a loop intentionally/forcefully.
+'''
+
+# Example 1 – 'for' loop with break
+for number in range(1, 11):
+    if number == 6:
+        break
+    else:
+        print(number)
+
+print('Exited the loop')
+
+# Example 2 – 'while' loop with break
+while True:
+    command = input('Type "exit" to quit: ')
+    if command == 'exit':
+        break

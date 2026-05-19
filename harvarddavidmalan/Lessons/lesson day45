@@ -1,0 +1,48 @@
+"""
+LISTS IN PYTHON – REVIEW + PRACTICE
+
+Lists work like vectors / arrays, but with important differences.
+
+C / JAVA:
+- Arrays are fixed.
+- Example: an int array with size 5 will always be int
+  and will have at most 5 values.
+
+PYTHON:
+- Dynamic: no fixed size, elements can be added while there is memory.
+- Any data type: lists do not have a fixed data type.
+"""
+"""
+-------------------------------------------------
+NEW CONTENT – TODAY
+-------------------------------------------------
+"""
+
+# Iterating over lists using FOR
+colors = ['green', 'yellow']
+
+for color in colors:
+    print(color)
+
+# Iterating over lists using WHILE
+index = 0
+while index < len(colors):
+    print(colors[index])
+    index += 1
+
+# Using enumerate to get index and value
+for index, color in enumerate(colors):
+    print(index, color)
+
+# Lists allow duplicated values
+numbers_list = []
+numbers_list.append(42)
+numbers_list.append(42)
+print(numbers_list)
+
+# Finding index of elements
+numbers = [5, 6, 7, 8, 9]
+print(numbers.index(6))
+
+# Searching inside a range
+print(numbers.index(7, 1))

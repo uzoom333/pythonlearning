@@ -1,0 +1,29 @@
+"""
+Lists work similarly to vectors / arrays, but with important differences.
+They are dynamic and can store ANY data type.
+
+C / Java:
+Arrays are fixed.
+Example: an int array with size 5 will always store integers
+and can only have up to 5 values.
+
+Python:
+- Dynamic: no fixed size, elements can be added as long as there is memory.
+- No fixed data type: a list can store different types of data.
+
+Python lists are represented using square brackets: []
+"""
+
+print(type([]))
+
+list1 = [1, 99, 23, 44, 57]
+list2 = ['g', 'j', 'h', 'r']
+list3 = []
+list4 = list(range(11))
+list5 = list('Renato')
+
+# Checking if a value exists in a list
+if 18 in list4:
+    print('Found the value')
+else:
+    print('Value not found')

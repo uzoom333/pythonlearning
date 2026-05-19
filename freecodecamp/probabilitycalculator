@@ -1,0 +1,65 @@
+'''
+Suppose there is a hat containing 5 blue balls, 4 red balls, and 2 green balls. What is the probability that a random draw of 4 balls will contain at least 1 red ball and 2 green balls? While it would be possible to calculate the probability using advanced mathematics, an easier way is to write a program to perform a large number of experiments to estimate an approximate probability.
+
+For this project, you will write a program to determine the approximate probability of drawing certain balls randomly from a hat.
+
+First, create a Hat class in main.py. The class should take a variable number of arguments that specify the number of balls of each color that are in the hat. For example, a class object could be created in any of these ways:
+
+hat1 = Hat(yellow=3, blue=2, green=6)
+hat2 = Hat(red=5, orange=4)
+hat3 = Hat(red=5, orange=4, black=1, blue=0, pink=2, striped=9)
+A hat will always be created with at least one ball. The arguments passed into the hat object upon creation should be converted to a contents instance variable. contents should be a list of strings containing one item for each ball in the hat. Each item in the list should be a color name representing a single ball of that color. For example, if your hat is {'red': 2, 'blue': 1}, contents should be ['red', 'red', 'blue'].
+'''
+
+
+import copy
+import random
+
+
+class Hat:
+    def __init__(self, **balls):
+        self.contents = []
+
+        for color, quantity in balls.items():
+            for _ in range(quantity):
+                self.contents.append(color)
+
+    def draw(self, num_balls):
+        if num_balls >= len(self.contents):
+            drawn = self.contents.copy()
+            self.contents.clear()
+            return drawn
+
+        drawn = []
+
+        for _ in range(num_balls):
+            index = random.randrange(len(self.contents))
+            drawn.append(self.contents.pop(index))
+
+        return drawn
+
+
+def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
+    success = 0
+
+    for _ in range(num_experiments):
+        hat_copy = copy.deepcopy(hat)
+
+        drawn_balls = hat_copy.draw(num_balls_drawn)
+
+        counts = {}
+
+        for ball in drawn_balls:
+            counts[ball] = counts.get(ball, 0) + 1
+
+        passed = True
+
+        for color, quantity in expected_balls.items():
+            if counts.get(color, 0) < quantity:
+                passed = False
+                break
+
+        if passed:
+            success += 1
+
+    return success / num_experiments

@@ -1,0 +1,123 @@
+"""
+--------------------------------
+TUPLE OPERATIONS
+--------------------------------
+Tuples are immutable collections.
+"""
+
+# Tuple concatenation
+tuple1 = (1, 2, 3)
+print(tuple1)
+
+tuple2 = (3, 4, 5)
+print(tuple2)
+
+print(tuple1 + tuple2)  # creates a new tuple
+print(tuple1)
+print(tuple2)
+
+
+"""
+--------------------------------
+Checking if an element exists
+--------------------------------
+"""
+
+numbers = (1, 2, 3)
+print(3 in numbers)
+print(7 in numbers)
+
+
+"""
+--------------------------------
+Iterating over tuples
+--------------------------------
+"""
+
+for n in numbers:
+    print(n)
+
+for index, value in enumerate(numbers):
+    print(index, value)
+
+
+"""
+--------------------------------
+Counting elements in a tuple
+--------------------------------
+"""
+
+letters = ('a', 'a', 'b', 'c')
+print(letters.count('c'))
+
+school = tuple('receba')
+print(school)
+print(school.count('e'))
+
+
+"""
+--------------------------------
+When to use tuples
+--------------------------------
+Tuples should be used when data does not need to be modified.
+They are safer and faster than lists.
+"""
+
+months = (
+    'january', 'february', 'march', 'april', 'may', 'june',
+    'july', 'august', 'september', 'october', 'november', 'december'
+)
+
+print(months)
+
+# Accessing elements
+print(months[5])  # june
+
+
+"""
+--------------------------------
+Iterating with while
+--------------------------------
+"""
+
+i = 0
+while i < len(months):
+    print(months[i])
+    i += 1
+
+
+"""
+--------------------------------
+Finding element index
+--------------------------------
+"""
+
+print(months.index('june'))
+
+
+"""
+--------------------------------
+Slicing tuples
+--------------------------------
+Syntax: tuple[start:end:step]
+"""
+
+print(months[0:1])
+
+
+"""
+--------------------------------
+Copying tuples
+--------------------------------
+Tuples do not have shallow/deep copy issues like lists.
+"""
+
+tuple_original = (1, 2, 3)
+new_tuple = tuple_original
+print(new_tuple)
+
+another_tuple = (7, 9, 10)
+
+new_tuple = new_tuple + another_tuple
+print(new_tuple)
+print(another_tuple)
