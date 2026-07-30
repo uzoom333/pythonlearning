@@ -1,55 +1,68 @@
-# 🐍 Python Learning Journey
+# Python Learning Journey
 
-Repositório com todos os exercícios e anotações da minha jornada de aprendizado em Python, partindo do zero.
+This repository documents my progression from Python fundamentals to practical exercises completed while studying CS50P and freeCodeCamp material.
 
-## 📌 Sobre
+## Purpose
 
-Estudos diários de Python realizados em dezembro de 2025, cobrindo desde fundamentos da linguagem até conceitos mais avançados. Cada arquivo representa uma aula/dia de estudo com exercícios práticos.
+The files are learning artifacts: short experiments, class notes, exercises, and course projects created while I was building confidence with the language. They are preserved to show progression, including early solutions that I would approach differently today.
 
-## 📂 Estrutura
+## Learning Areas
 
+- variables, data types, operators, and input/output;
+- conditionals, loops, functions, and exceptions;
+- strings and built-in data structures;
+- modules, files, regular expressions, and unit tests;
+- classes, objects, decorators, and introductory object-oriented programming;
+- practical problem solving through guided projects.
+
+## Repository Map
+
+```text
+pythonlearning/
+├── harvarddavidmalan/
+│   ├── Lessons/             # Chronological lesson files
+│   ├── POO/                 # Object-oriented programming exercises
+│   ├── conditionals/
+│   ├── exceptions/
+│   ├── functions/
+│   ├── inout/
+│   ├── libraries/
+│   ├── regular expressions/
+│   └── unittest/
+└── freecodecamp/            # Guided Python projects and exercises
 ```
-Lessons/
-├── lesson day 12 e 13  → Primeiros passos, variáveis e tipos
-├── lesson day 16       → Estruturas condicionais
-├── lesson day 17       → Loops e iteração
-├── lesson day41        → Funções
-├── lesson day42        → Manipulação de strings
-├── lesson day43        → Listas e tuplas
-├── lesson day 44       → Dicionários
-├── lesson day45        → Módulos e imports
-├── lesson day 46       → Tratamento de erros
-├── lesson day47        → Arquivos (leitura/escrita)
-├── lesson day 48       → POO - Classes e objetos
-├── lesson day 49       → POO - Herança
-├── lesson day 50       → Compreensão de listas
-├── lesson day 51       → Funções lambda e map/filter
-└── lesson day 52       → Revisão e projeto final
+
+Some filenames and interface messages remain in their original learning format.
+
+## Running an Exercise
+
+Most files are independent scripts and use only the Python standard library:
+
+```bash
+git clone https://github.com/uzoom333/pythonlearning.git
+cd pythonlearning
+python3 "harvarddavidmalan/functions/hello_basic.py"
 ```
 
-## 🎯 Conteúdos estudados
+Choose a specific file before running it and review its source first; several scripts expect interactive input.
 
-- [x] Variáveis, tipos e operadores
-- [x] Estruturas condicionais (if/elif/else)
-- [x] Loops (for, while)
-- [x] Funções e escopo
-- [x] Strings e manipulação de texto
-- [x] Estruturas de dados (listas, tuplas, dicionários)
-- [x] Módulos e bibliotecas
-- [x] Tratamento de exceções
-- [x] Leitura e escrita de arquivos
-- [x] Programação Orientada a Objetos
-- [x] Compreensão de listas e funções lambda
+## Study Sources
 
-## 🛠️ Tecnologias
+- [CS50's Introduction to Programming with Python](https://cs50.harvard.edu/python/)
+- [freeCodeCamp Scientific Computing with Python](https://www.freecodecamp.org/learn/scientific-computing-with-python/)
 
-- Python 3.12
-- VS Code
+## Current Perspective
 
-## 📝 Observações
+This repository represents an early stage of my programming education. Later projects apply the same foundations with more structure, testing, documentation, and mathematical modeling.
 
-Todos os códigos são exercícios de aprendizado — rascunhos, testes e experimentos feitos durante os estudos. O objetivo é documentar a evolução e o progresso, não código perfeito.
+## Technologies
 
----
+- Python
+- pytest exercises
+- Git and GitHub
 
-*Desenvolvido durante estudos de Python — Dezembro/2025*
+## Author
+
+Renato Morais Mundim Filho
+
+- [GitHub](https://github.com/uzoom333)
